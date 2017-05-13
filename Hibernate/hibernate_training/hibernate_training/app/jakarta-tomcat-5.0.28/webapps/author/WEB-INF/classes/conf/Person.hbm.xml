@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.author.data.Person" table="person">
+		<id name="personId" column="person_id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="personName" column="person_name" />
+		<property name="DOB" column="person_DOB" />
+		<property name="age" column="person_age" />
+		<property name="country" column="person_country" />
+		<property name="email" column="person_email" />
+	</class>
+
+</hibernate-mapping>

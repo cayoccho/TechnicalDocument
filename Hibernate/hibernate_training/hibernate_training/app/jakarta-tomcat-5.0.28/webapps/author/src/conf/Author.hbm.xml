@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.author.data.Author" table="author">
+		<id name="authId" column="author_id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="nickName" column="author_nick" />
+		<property name="publisherName" column="author_publisher" />
+		<property name="isAlive" column="author_is_alive" />
+		<many-to-one name="person" column="person_id" unique="true"
+			not-null="true"/>
+		<set name="work" table="author_work" cascade="save-update,delete">
+			<key column="author_id" unique="false" />
+			<many-to-many column="work_id" unique="true"
+				class="com.author.data.Work" />
+		</set>
+	</class>
+
+</hibernate-mapping>

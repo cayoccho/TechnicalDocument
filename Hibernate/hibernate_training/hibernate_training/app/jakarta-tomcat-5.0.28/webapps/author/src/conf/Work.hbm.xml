@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.author.data.Work" table="work">
+		<id name="workId" column="work_id" type="int">
+			<generator class="native" />
+		</id>
+		<property name="workName" column="work_name" />
+		<property name="workCategory" column="work_category" />
+		<property name="copiesSold" column="work_copies_sold" />
+		<property name="value" column="work_value" />
+	</class>
+
+	
+<!--	<class name="com.author.data.Work" table="work">-->
+<!--		<id name="workId" column="work_id" type="int">-->
+<!--			<generator class="native" />-->
+<!--		</id>-->
+<!--		<discriminator column="work_category" type="string"/>-->
+<!--		<property name="workName" column="work_name" />-->
+<!--		<property name="copiesSold" column="work_copies_sold" />-->
+<!--		<property name="value" column="work_value" />-->
+<!---->
+<!--		<subclass discriminator-value="Fact"-->
+<!--			name="com.author.data.subclass.FactWork">-->
+<!--			</subclass>-->
+<!--		<subclass discriminator-value="Fiction"-->
+<!--			name="com.author.data.subclass.FictionWork">-->
+<!--			</subclass>-->
+<!--	</class>-->
+	
+
+</hibernate-mapping>
