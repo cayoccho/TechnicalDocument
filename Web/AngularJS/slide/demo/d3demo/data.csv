@@ -1,0 +1,6 @@
+alarmType,numberOfAlarms
+Clear,100
+Warning,500
+Minor,400
+Major,300
+Critical,100
